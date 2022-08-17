@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #show_videos{
+            display: grid;
+            grid-template-columns: repeat(4,20%);
+            grid-gap: 5%;
+            margin-top: 20px;
+        }
+
+        button{
+            color: white;
+            background-color: red;
+            /* border: none; */
+            width: 80px;
+            height:20px;
+            font-weight: bolder;
+        }
+
+        button:hover{
+            cursor: pointer;
+            
+        }
+
+        #box{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+        img{
+            display: block;
+            margin: auto;
+            height: 80px;
+            margin-left: 20px;
+        }
+        #imgBox{
+            display: flex;
+            margin: auto;
+            width: 30%;
+        }
+        #query{
+            font-size: 15px;
+            height: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="imgBox">
+    <div >
+        <h1 style="color: #333333;">AKSHAY </h1>
+    </div>
+    <div>
+        <img src="https://tse4.mm.bing.net/th?id=OIP._IfEaUssjZQwZ1u92b1_GgHaEK&pid=Api&P=0&w=305&h=171" alt="">
+    </div>
+</div>
+
+    <input type="text" id="query" placeholder="Enter Video Name">
+    <button onclick="searchVideo()">Search</button>
+    <div id="show_videos"></div>
+</body>
+</html>
+
+<script src="index.js"></script>
+
+
+<!-- <iframe width="560"
+ height="315"
+  src="https://www.youtube.com/embed/NJktTAMhE74" 
+  title="YouTube video player"
+   frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe> -->

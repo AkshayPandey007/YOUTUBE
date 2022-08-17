@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #singleBox{
+         width: 70%;
+         margin: auto;
+         margin-top: 10px;
+        }
+
+        #box{
+            height: 600px;
+        }
+
+        img{
+            display: block;
+            margin: auto;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://tse4.mm.bing.net/th?id=OIP._IfEaUssjZQwZ1u92b1_GgHaEK&pid=Api&P=0&w=305&h=171" alt="">
+    <div id="singleBox"></div>
+    
+</body>
+</html>
+
+<script>
+
+    var movieData = JSON.parse(localStorage.getItem("video"))
+    console.log(movieData)
+
+
+let div = document.createElement("div");
+div.setAttribute("id","box")
+
+let iframe = document.createElement("iframe")
+iframe.src=`https://www.youtube.com/embed/${movieData.videoId}`
+iframe.width="100%"
+iframe.height="100%"
+iframe.allow="fullscreen"
+
+let name = document.createElement("h1")
+name.innerText=movieData.title
+
+div.append(iframe,name)
+
+singleBox.append(div)
+
+
+</script>
